@@ -1,3 +1,18 @@
+1. site él, elindult, de tele van hibával
+2. elkezdjük fejleszteni:
+https://github.com/zuzmo/joszolgalat.hu
+3. a mindennapi működéshez kellenek önkéntes adminisztrátorok
+- ezt Csaba Madarász fogja elindítani, képezni
+4. az integrációt is elkezdjük:
+- ustream Gergely Hodicska
+- sms ???
+- email: Gabor Grosschmid
+- üzemeltetés: info@joszolgalat.hu, gephaz@joszolgalat.hu
+
+
+
+
+
 Ushahidi Platform
 =================
 The Ushahidi Platform is an open source web application for information collection, vizualisation and interactive 
