@@ -1,0 +1,10 @@
+/**
+ * Nexmo stylesheet
+ */
+.my_table td h4.fix {
+    padding-top: 6px !important;
+}
+
+.my_table .row {
+    margin-top: 1px !important;
+}
