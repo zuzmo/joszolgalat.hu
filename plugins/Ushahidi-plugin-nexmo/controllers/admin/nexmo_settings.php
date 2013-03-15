@@ -18,7 +18,7 @@ class Nexmo_Settings_Controller extends Admin_Controller {
 		$this->template->this_page = "addons";
 		
 		// Nexmo settings view
-		$this->template->content =  new View('admin/plugins_settings');
+		$this->template->content =  new View('admin/addons/plugin_settings');
 		$this->template->content->title  = Kohana::lang('nexmo.settings');
 		$this->template->content->settings_form = new View('nexmo/admin/nexmo_settings');
 		

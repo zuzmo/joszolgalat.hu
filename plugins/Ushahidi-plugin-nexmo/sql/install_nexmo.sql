@@ -21,3 +21,4 @@ CREATE TABLE IF NOT EXISTS `nexmo_message_log` (
 	`delivery_status` TINYINT, -- 0 Delivery status not received/not delivered 1 - Delivery succeeded
 	PRIMARY KEY (`id`)
 );
+

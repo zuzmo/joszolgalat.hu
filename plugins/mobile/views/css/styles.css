@@ -1,0 +1,366 @@
+html,
+body {
+	font: 12px/14px "Trebuchet MS",sans-serif;
+	margin:0;
+	padding:0;
+	height:100%;
+}
+h1, h2, h3, p {
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+a{
+    color: #3764aa;
+    text-decoration: none;
+}
+a:hover{
+    color: #008cff;
+    text-decoration: underline;
+}
+
+div#container {
+   min-height:100%;
+   position:relative;
+}
+
+form{
+	margin:0;
+	padding:0;
+}
+
+/* Header */
+div#header{
+	padding:10px;
+	background-color:#666;
+	border-bottom:1px dotted #000;
+	border-top:2px solid #000;
+	margin-bottom:5px;
+	color:#fff;
+}
+	div#header h1 {
+		font-size:22px;
+	}
+	div#header span {
+		font-size:11px;
+	}
+
+div#navigation{
+	padding:3px 3px 3px 5px;
+	margin-bottom:5px;
+	background-color:#ccc;
+}
+
+	div#navigation h1 {
+		font-size:12px;
+	}
+	
+/* Page */
+div#page{
+	margin:0 5px 0 5px;
+	padding-bottom:40px; /* Height of the footer */
+}
+	div#page .block{
+		margin-bottom:10px;
+	}
+		div#page .block .submit,
+		div#page .block .other,
+		div#page .block .expand a {
+			padding:8px 5px;
+			font-size:16px;
+			background-color:#eee;
+		}
+			div#page .block .other span,
+			div#page .block .expand span{
+				font-size:14px;
+				padding-left:10px;
+				color:#999;
+			}
+		div#page .block .submit {
+			background: #368C00 url(../images/submit-incident.jpg) 6px 7px no-repeat;
+			padding-left:30px;
+		}
+		div#page .block .submit a{
+			color:#fff;
+			display:block;
+		}
+		div#page .block .expand a:link, div#page .block .expand a:visited {
+			border-bottom-width:1px;
+			background-image:url(../images/arrow-down.gif);
+			background-repeat:no-repeat;
+			background-position:98% 50%;
+		}
+		div#page .block .expand a:hover, div#page .block .expand a:active, div#page .block .expand a:focus {
+			text-decoration:underline
+		}
+		div#page .block .expand a.open:link, div#page .block .expand a.open:visited {
+			border-bottom-style:solid;
+			background:#eee url(../images/arrow-up.gif) no-repeat 98% 50%;
+		}
+		div#page .block .collapse{
+			padding:3px 3px 3px 12px;
+		}
+		
+		div#page .block ul{
+			padding-left:15px;
+			margin:0;
+		}
+			div#page .block ul li{
+				list-style-type: square;
+				margin:8px 0 12px 0;
+				padding-bottom:10px;
+				border-bottom:1px solid #ccc;
+			}
+		
+		.swatch {
+		    float:left;
+		    height:12px;
+		    margin-right: 8px;
+		    width:12px;
+		    border:1px solid white;
+		}
+	
+	div#page .block_title{
+		margin-top:15px;
+		padding:8px 5px;
+		font-size:16px;
+	}
+	
+	div#page .main_title{
+		padding:8px 5px;
+		font-size:16px;
+		margin-bottom:10px;
+		border-bottom:1px solid #ccc;
+	}
+	
+/* Report List Page */
+.report_list{
+	
+}
+	div#page .block ul{
+		padding-left:15px;
+		margin:0;
+	}
+		div#page .block ul li{
+			list-style-type: square;
+			margin:8px 0 12px 0;
+			padding-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+	.report_list .location_name{
+		color:#666;
+		font-style:italic;
+		font-size:90%;
+	}
+	.report_list .filter label{
+		margin-left: 10px;
+		display:block;
+		float:left;
+		width:65px;
+		margin-top:5px;
+		font-size: 14px;
+	}
+	.report_list .filter .searchbtn{
+		margin:1px 0 0 10px;
+		float:right;
+	}
+	.report_list .filter .catlist{
+		width:220px;
+		margin-left:2px;
+	}
+
+/* Report View Page */
+.report_info{
+	margin-top:10px;
+}
+	.report_info h2{
+		font-size:16px;
+	}
+	.report_info .verified, .report_list li span.verified{
+		float:right;
+		background-color:#ccc;
+	    background: #A60003;
+	    padding:5px;
+	    float: right;
+	    color: #FFF;
+	    text-transform: uppercase;
+	    font-size: 10px;
+	    font-weight: bold;
+	    text-align: center;
+	    margin: 0 0 0 10px;
+	}
+	.report_info .verified_yes, .report_list li span.verified_yes{
+		background: #368c00;
+	}
+	.report_info .verified span{
+	    color: #FFF;
+	    text-transform: uppercase;
+	    font-size: 14px;
+	    font-weight: bold;
+	}
+	
+	.report_info ul.details{
+	    list-style: none;
+		margin:0;
+		padding:0;
+	}
+
+	.report_info ul.details li{
+	    list-style: none;
+	    border-bottom: #EEEEEE 1px solid;
+	    padding: 5px 0;
+	    color: #666666;
+	    font-size: 11px;
+	}
+
+	.report_info ul.details li small{
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    font-size: 11px;
+	    margin: 0 0 5px 0;
+	}
+	.report_info ul.details li a{
+	    background: #E2E2E2;
+	    padding: 1px 4px 2px 4px;
+	    -moz-border-radius: 3px;
+	    -webkit-border-radius: 3px;
+	    color: #004276;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    font-size: 10px;
+	    text-decoration: underline;
+	}
+	
+.report_submit{
+	
+}
+	.report_form{
+
+	}
+		.report_form .report_row{
+			margin:0 0 15px 0;
+			clear:both;
+		}
+			.report_form .report_row h4{
+				margin:0 0 5px 0;
+				padding:0;
+				font-size:110%;
+				font-weight:bold;
+			}
+			.report_form .report_row .text {
+				
+			}
+			.report_form .report_row .long{
+				width:97%;
+			}
+			.report_form .report_row .date-time{
+				float:left;
+				margin-right:10px;
+			}
+			.report_form .report_row .report_category{
+				clear:both;
+				overflow:hidden;
+				font-size:90%;
+			}
+			.report_form .report_row .report_category ul{
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			.report_form .report_row .report_category ul li{
+				overflow:hidden;
+				list-style: none;
+			}
+				/*Categories Tree*/
+				.report_form .report_row .report_category ul ul { width: auto; float: none; }
+				.report_form .report_row .report_category ul li.sub_category { padding-left: 47px; }
+				.report_form .report_row .report_category ul li.sub_category_last { background-position: 16px -1766px; }
+				.report_form .report_row .report_category ul li input.check-box { margin: 0 3px 0 0; }
+				.report_form .report_row .report_category ul li.hover,
+				.report_form .report_row .report_category ul li li:hover { background-color: #efefef; }
+				ul.treeview li.lastCollapsable,
+				ul.treeview li.lastExpandable { width:155px; }
+				
+			.report_form .report_row .location{
+				display:block;
+				margin:5px 0;
+				font-weight:bold;
+			}
+	
+#map_canvas{
+	width:100%;
+	height:300px;
+	border:1px solid #ccc;
+	margin:15px 0 0 0;
+}		
+		
+/* Footer */
+div#footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:30px;   /* Height of the footer */
+	border-top:1px dotted #000;
+	background-color:#ccc;
+	line-height:30px;
+	font-size:90%;
+}
+
+.highlight{
+	background-color:#FFFFCC;
+	font-weight:bold;
+}
+
+div.red-box {
+	margin:10px 0 25px 0;
+	padding:9px 0 8px;
+	background:#FFD8D9;
+	border:2px solid #990000;
+	clear:both;
+	overflow:hidden;
+}
+div.red-box h3{
+	margin:0;
+	padding:0 0 0 15px; 
+	font-size:14px;
+	color:#555;
+}
+div.red-box ul{
+	margin-left:15px;
+	padding-left:15px;
+}
+
+/* Pagination */
+.pagination
+{
+    padding: 3px;
+    margin: 3px;
+}
+.pagination a
+{
+    padding: 2px 3px 2px 3px;
+    margin: 1px;
+    border: 1px solid #AAAADD;
+    text-decoration: none; /* no underline */
+    color: #000099;
+}
+.pagination a:hover, .pagination a:active
+{
+    border: 1px solid #000099;
+    color: #000;
+}
+.pagination span.current
+{
+    padding: 2px 3px 2px 3px;
+    margin: 1px;
+    border: 1px solid #000099;
+    font-weight: bold;
+    background-color: #993300;
+    color: #FFF;
+}
+.pagination span.disabled
+{
+    padding: 2px 3px 2px 3px;
+    margin: 2px;
+    border: 1px solid #EEE;
+    color: #DDD;
+}
