@@ -1,0 +1,191 @@
+Ushahidi 2.5 (Cairo), 01-08-2012
+-------------------------------------
+
+* Mapping: 
+	- The mapping code has been refactored and decoupled from the timeline. 
+	- There are now events triggered for actions such as zoom changes, changine layer, etc. , which can be used to extend mapping function
+	- The timeline can now be turned on or off.
+* Themes: 
+	- The views have been namespaced on a per-controller basis.
+	- Views for the front-end (including JS) have all been moved to the themes folder
+* Settings table:
+	- The structure for the settings table has been modified so that data are stored as key/value pairs.
+* Installer:
+	- The installer has been reworked in order to work with the new settings table structure
+	- Additionally, we now perform the installation check in index.php
+* Configuration files:
+	- The following files are no longer in the repository: config.php, auth.php and encryption.php.
+		In their place are templates (.template.php files) which are used by the installer to generate the respective config files.
+* Roles and Permission:
+	- User permissions have been refactored into a separate table form roles. This now allows plugins to add their own permissions.
+* Alerts
+	- Allow admin to view, search and delete user alerts in the system
+* Security fixes thanks to OWASP Portland
+	- Multiple SQL injections  (Thanks: Timothy D. Morgan, Kees Cook, postmodern)
+	- Missing authentication on comments, reports and email API calls  (Thanks: Kees Cook, Dennison Williams)
+	- Admin user hijacking through the installer  (Thanks: Wil Clouser)
+	- Stored XSS on member profile pages  (Thanks: Amy K. Farrell)
+	- User data exposed in comment API
+* Further details on migrating to 2.5 are available on the wiki
+  -> https://wiki.ushahidi.com/display/WIKI/Migrating+to+Ushahidi+2.5
+
+
+Ushahidi 2.4.1 - Upgrader fix release, 01-08-2012
+-------------------------------------
+
+* Add support for removing old files during upgrade (#716)
+* Clear cache after new files copied over
+* Fix for DB upgrades 
+
+
+Ushahidi 2.4 - Bug fix release, 30-05-2012
+-------------------------------------
+
+* Fix A 500 error that was being thrown by the Scheduler (#387)
+* Category icons now showing up on the map (#390)
+* Fix map styling on the Actions/Triggers module (#435)
+* Security fixes
+	 - Cross Site Scripting (XSS)
+* More on the bugs fixed can be found here:
+	-> https://docs.google.com/a/ushahidi.com/spreadsheet/ccc?key=0AizezfooB3k9dC1GX3RsNl9ocnQ3U1lmTUtSbFAwMlE#gid=7
+
+
+
+Ushahidi 2.3.2 - Bug fix release, 08-05-2012
+-------------------------------------
+
+* Security fix for Admin API - prevent member role from accessing the admin API. (SA-WEB-2012-005)
+* Fix Google maps base layers - base layer type were being incorrectly escaped
+* Fix session driver change from 2.3.1 - Set session driver back to cookie as other drivers are buggy
+
+Ushahidi 2.3.1 - Security fix release, 30-04-2012
+-------------------------------------
+
+* Security fix for session storage - sessions from any deployment were valid on any other deployment (SA-WEB-2012-004)
+
+Ushahidi 2.3 - (Juba) Bug fix release, 24-04-2012
+--------------------------
+* Cleaned up database Schema
+* Few improvements on the installer 
+	– This includes the introduction of an admin login email configuration.
+	- Hiding of admin password once installation is complete.
+* Added HTML editing and more attributes to the page editor. 
+* Security fixes
+    - Cross Site Request Forgery (CSRF)
+    - Cross Site Scripting (XSS)
+
+Ushahidi 2.2.1 - bug fix release, 04-04-2012
+--------------------------
+* Map JS unification (#278)
+* Make Scheduler JS options (#331)
+* Update child categories of parent category that was reassigned to id 999 updated to match the correct parent_id 999 and not 5 (#322) 
+* Zoom level is never set on Get Alerts map (#358)
+* Security fixes
+    - JSON controller returned non-approved reports
+    - JSON controller exposed on private deployment
+    - Markers controller exposed on private deployment
+    - json/single/ID SQL injection vulnerability
+    - Download reports (admin) could inadvertently return non-approved reports
+
+Ushahidi 2.2 (Juba), 13-03-2012
+---------------------------------
+* Riverid Integration
+    - RiverID is an authentication and identity management system that provides users with a secure central sign-on facility.
+    - With RiverID, your are able to access all the Ushahidi products using just one username and password. This includes all the Crowdmaps you've set up and, when launched, your SwiftRiver streams.
+    - This eliminates the need for multiple passwords per person per Crowdmap deployment. Though, you are free to use as many different passwords as you choose.
+* Base Map defaulted to OSM
+    - The default map version has been set to OpenStreetMap (OSM). There is a drop-down to select your map. You can select to use a variety of maps including Google.
+* Badges
+	- Badges are a great way for Ushahidi deployers to award their users.
+	- Developers can also find badge image resources to include in their projects.
+	- These are badge images in a variety of categories which can be used in Ushahidi or Crowdmap deployments or other services.	
+* Automated Actions
+    - The admin panel now allows you to set up automated actions on your deployment.
+	- You are now able to set a chain of events into motion when certain conditions that you specify are hit.
+* Alerts
+    - Subscription of Alerts via SMS.
+    - Unsubscribing from mobile alerts.
+* Security
+    - Plugged SQL and HTML injection vulnerabilites
+* Plugins
+    - Sharing feature moved into a plugin
+	- New plugins, adsense and Viddler
+* Public Listing
+    - Plublic listing of deployment which increases your deployment's discoverability.
+* Features changed on core
+    - Changed the Pages editor from Tinymce to JWYSIWYG
+* Themes
+	- More themes to choose from.
+
+
+Ushahidi 2.1 (Tunis), 09-08-2011
+---------------------------------
+* Usability
+    - A new multi-faceted reports listing page that provides the user with the ability
+    to filter reports using a variety of options such as categories, verification status, report submission channel
+    - Centralized the validation and saving of reports. This is now handled by the reports helper
+    - Streamlined the list of parameters for filtering reports on the frontend
+    - Implemented category sorting in a drag and drop fashion
+    - A new blocks feature to allow the user to toggle the display of certain sections on the front-end
+    - Enhanced the custom forms feature (courtesy of the Konpa Group) to better augment data collection via the reports submission page
+    - Ability to add geometries (polygons) to a report
+    - Option to get a taller/wider map in the report viewing page
+* Checkins (Experimental)
+    - Checkins system
+* Facebook Module
+* Member Module
+    - New member module that allows people to log in to a deployment via OpenID or a username/password
+    pair specific to the deployment
+* Performance
+    - Refactored the json controller to fetch all the reports via a single query instead of using multiple
+    queries
+    - Switched to straight SQL instead of ORM for fetching the reports
+* Security
+    - Plugged SQL injection vulnerabilites
+* Testing
+    - Added test framework (PHPUnit for unit tests and Selenium for functional tests) and tests
+* JavaScript
+    - Switched from GML to Vector layers in timline.js for both the reports and KML layers on the main map
+* Features removed from the core
+    - Removed Laconica from the list of message services. No longer supported
+
+Ushahidi 2.0 (Luanda), 22-11-2010
+---------------------------------
+* Usability
+    - Improved reports listing to convey different sets of information quickly and in a practical way
+* Themes
+    - Themes can now be created without having to tamper with the code.
+* API
+    - Refactored the API controller and implemented the API system in a modular fashion. 
+      API tasks/features are now availed by way of libraries
+* Plugins
+    - New plugin architecture based on Kohana Events
+    - Implemented FrontlineSMS and Clickatell SMS services as plugins and added them to the list of stock plugins
+    - SMSSync plugin for the SMSSync Android application
+* Scheduler
+    - Ability to schedule tasks in cron like fashion
+* Upgrader
+    - An upgrader to automatically update the platform the latest release
+    
+Ushahidi 1.2 (After Haiti in Jan 2010)
+--------------------------------------
+*Usability
+    - A collapsible category tree on the submit report page
+* Clustering
+    - Clustering of reports is now on the server side. It was previously being done on the client side via JavaScript
+* Custom Forms
+    - A custom forms feature to collect additional information in addition to that in the "Submit Report" page
+* Report Edit Logs
+    - Edit logs for a report are now available so a user of the admin console can see the series of changes/revisions/edits 
+      that have been made to a report
+
+Ushahidi 1.0 (Mogadishu) 10-12-2009
+-----------------------------------
+* A web installer is now bundled with the platform to ease the process of deploying/installing the platform
+* New CSS based design that is easier to skin
+* Admin email notifications on emails and comments
+* Site statistics and analytics
+* Feature to add custom pages and tabs
+* Auto-geotagging of news feeds
+* Ability to create reports from news feeds
+* Feature to add KML/KMZ overlays on the map
