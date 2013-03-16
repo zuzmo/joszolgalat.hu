@@ -182,7 +182,7 @@ $(function(){
 						<div style="margin-bottom:10px;">
 							<?php echo Kohana::lang('ui_main.report_option_1'); ?>
 							<?php foreach ($phone_array as $phone) { ?>
-								<strong><?php echo $phone; ?></strong>
+								<strong>+<?php echo $phone; ?></strong>
 								<?php if ($phone != end($phone_array)) { ?>
 									 <br/>
 								<?php } ?>

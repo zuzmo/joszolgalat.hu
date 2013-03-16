@@ -764,14 +764,14 @@
 		    event.feature.attributes.link != '') {
 
 		    content += "<a href='"+event.feature.attributes.link+"'>" +
-			    "More Information</a><br/>";
+			    "További információ</a><br/>";
 		}
 
 		content += "<a id=\"zoomIn\">";
-		content += "Zoom In</a>";
+		content += "Nagyítás</a>";
 		content += "&nbsp;&nbsp;|&nbsp;&nbsp;";
 		content += "<a id=\"zoomOut\">";
-		content += "Zoom Out</a></div>";
+		content += "Kicsinyítés</a></div>";
 		content += "</div><div style=\"clear:both;\"></div></div>";		
 
 		if (content.search("<script") != -1) {

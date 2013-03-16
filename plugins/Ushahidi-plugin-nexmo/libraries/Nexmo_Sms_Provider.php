@@ -49,7 +49,7 @@ class Nexmo_Sms_Provider implements Sms_Provider_Core {
 	public function __construct()
 	{
 		// Load the settings from the DB
-		/*$nexmo_settings = ORM::factory('nexmo', 1);
+		$nexmo_settings = ORM::factory('nexmo', 1);
 		
 		// Settings loaded?
 		if ($nexmo_settings->loaded)
@@ -61,7 +61,7 @@ class Nexmo_Sms_Provider implements Sms_Provider_Core {
 		{
 			// No settings yet, log error
 			Kohana::log('error', Kohana::lang('nexmo.no_settings'));
-		}*/
+		}
 	}
 
 	

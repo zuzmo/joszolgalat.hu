@@ -13,17 +13,17 @@ $lang = array(
 		'numeric' => 'Kérem, válasszon valós elemet, amelyet le kíván tölteni.',
 	) ,
 	'data_point' => array(
-		'between' => 'Kérem, válasszon érvényes felajánlás típus, amelyet le kíván tölteni.',
-		'numeric' => 'Kérem, válasszon érvényes felajánlás típus, amelyet le kíván tölteni.',
-		'required' => 'Kérem, válasszon érvényes felajánlás típus, amelyet le kíván tölteni.',
+		'between' => 'Kérem, válasszon érvényes bejelentés típust, amelyet le kíván tölteni.',
+		'numeric' => 'Kérem, válasszon érvényes bejelentés típust, amelyet le kíván tölteni.',
+		'required' => 'Kérem, válasszon érvényes bejelentés típust, amelyet le kíván tölteni.',
 	) ,
 	'from_date' => array(
 		'date_mmddyyyy' => 'A "FROM" dátummező nem tartalmaz érvényes adatot.',
-		'range' => 'Kérem, adjon meg érvényes "FROM" dátumot. Nem lehet több a mai dátumnál.',
+		'range' => 'Kérem, adjon meg érvényes "FROM" dátumot. Nem lehet későbbi a mai dátumnál.',
 	) ,
 	'incident_active' => array(
-		'between' => 'Kérem, adjon meg valós értéket a felajánlás jóváhagyásához!',
-		'required' => 'Kérem, adjon meg valós értéket a felajánlás jóváhagyásához!',
+		'between' => 'Kérem, adjon meg valós értéket a bejelentés jóváhagyásához!',
+		'required' => 'Kérem, adjon meg valós értéket a bejelentés jóváhagyásához!',
 	) ,
 	'incident_ampm' => array(
 		'validvalues' => 'Az de/du mező nem tartalmaz érvényes értéket!',
@@ -69,8 +69,8 @@ $lang = array(
 		'required' => 'A címmező kitöltése kötelező!',
 	) ,
 	'incident_verified' => array(
-		'between' => 'Kérem, adjon meg valós értéket a felajánlás megerősítéséhez!',
-		'required' => 'Kérem, adjon meg valós értéket a felajánlás megerősítéséhez!',
+		'between' => 'Kérem, adjon meg valós értéket a bejelentés megerősítéséhez!',
+		'required' => 'Kérem, adjon meg valós értéket a bejelentés megerősítéséhez!',
 	) ,
 	'incident_video' => array(
 		'url' => 'A videó-link mező nem tartalmaz érvényes URL-t!',
@@ -81,9 +81,9 @@ $lang = array(
 	) ,
 	'locale' => array(
 		'alpha_dash' => 'A helyzet mező helytelen értéket tartalmaz.',
-		'exists' => 'Erről a felajánlásról már készült fordítás erre a nyelvre.',
+		'exists' => 'Erről a bejelentésról már készült fordítás erre a nyelvre.',
 		'length' => 'A helyzet mező helytelen értéket tartalmaz.',
-		'locale' => 'Az eredeti felajánlás és a fordításnak nyelve megegyező.',
+		'locale' => 'Az eredeti bejelentés és a fordításnak nyelve megegyező.',
 		'required' => 'A helyzet meghatározása kötelező.',
 	) ,
 	'location_name' => array(
@@ -92,7 +92,7 @@ $lang = array(
 	) ,
 	'longitude' => array(
 		'between' => 'A földrajzi hosszúsági mező nem tartalmaz valós értéket.',
-		'required' => 'A földrajzi hosszúság megadása kötelező. Pontos helymeghatározáshoz, kérem kattintson a térképre!',
+		'required' => 'A földrajzi hosszúság megadása kötelező. Pontos helymeghatározáshoz kérem, kattintson a térképre!',
 	) ,
 	'person_email' => array(
 		'email' => 'Az email-cím mező nem tartalmaz érvényes email-címet!',

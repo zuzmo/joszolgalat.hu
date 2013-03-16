@@ -42,7 +42,9 @@ h5, h4 {
 }
 
 /* structural divs */
-body#page { background:#e4e1dd url(../images/bg_transparent-lines.png) repeat; }
+body#page {
+	background:#e4e1dd url(../images/bg_transparent-lines.png) repeat;
+}
 
 div#middle { background:transparent url(../images/bg_top-cap.png) top no-repeat; }
 
@@ -92,7 +94,7 @@ div.search-form input.searchbtn {
   display: block;
   font-size: 12px;
   background-image:none;
-  background-color:#3764AA;
+  background-color:#d24836;
   margin-left: 10px;
   line-height: 17px;
   padding: 2px 5px 3px;
@@ -129,16 +131,34 @@ div.submit-incident a, .btn_submit {
 }
 
 /* primary nav */
-div#mainmenu { background:none; border:none; height:27px; }
+div#mainmenu {
+	background-image: -ms-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: -moz-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: -o-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #CFCFCF), color-stop(1, #424242));
+	background-image: -webkit-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: linear-gradient(to bottom, #CFCFCF 0%, #424242 100%);
+
+	border:none;
+	height:27px;
+}
 div#mainmenu ul {
   
 }
 div#mainmenu ul li {
-  margin:0 8px 0 0;
+  margin:0 50px 0 50px;
 }
-div#mainmenu ul li a { padding:3px 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+div#mainmenu ul li a {
+	text-transform: none;
+	font-weight: normal;
+	padding:3px 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
 div#mainmenu ul li a:hover, div#mainmenu a.active {
-  
+	background: none;
+	text-decoration: underline;
+	text-shadow: #424242;
 }
 
 /* filter box */
@@ -216,7 +236,22 @@ div.additional-content { display:none; }
 div.content-container { background:transparent; padding:10px; }
 
 div.content-block { position:relative; margin:0 18px; background:#eeedea; }
-div.content-block h5 { float:left; position:absolute; top:-18px; left:-18px; padding:5px; border:7px solid #fff; background:#529bf5; }
+div.content-block h5 {
+	float:left;
+	position:absolute;
+	top:-18px;
+	left:-18px;
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: normal;
+	background-image: -ms-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: -moz-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: -o-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #CFCFCF), color-stop(1, #424242));
+	background-image: -webkit-linear-gradient(top, #CFCFCF 0%, #424242 100%);
+	background-image: linear-gradient(to bottom, #CFCFCF 0%, #424242 100%);
+	color: white;
+}
 div.content-block h5 span { display:none; }
 div.content-block .table-list { margin-top:18px; }
 table.table-list thead th.date { width:20%; }
@@ -234,7 +269,15 @@ div#main { padding:15px 10px; }
 #main .left-col { background:#EEEDEA; position:relative; padding:35px 10px 10px; margin:4px 0 0 18px; width:525px; }
 
 
-.left-col h1.report-title { float:left; position:absolute; top:-18px; left:-18px; padding:5px; border:7px solid #fff; background:#529bf5; color:#fff; }
+.left-col h1.report-title {
+	float:left;
+	position:absolute;
+	top:-18px;
+	left:-18px;
+	padding: 10px 20px;
+	background-color: white;
+	color:#000000;
+}
 
 .report_detail .r_verified { position:absolute; top:10px; right:18px;  }
 
